@@ -21,5 +21,5 @@ plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 
 st.pyplot(plt)
-streamlit run app.py
+
 
