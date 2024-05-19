@@ -1,10 +1,13 @@
+pip install streamlit
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from google.colab import files
-uploaded = files.upload()
 
-df = pd.read_csv('/content/one-star-michelin-restaurants.csv')
-print(df.head())
+csv_url = 'https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/one-star-michelin-restaurants.csv'
+
+df = pd.read_csv(csv_url)
+
+st.write(df.head())
 
 region_count = df['region'].value_counts().reset_index()
 region_count.columns = ['region', 'count']
@@ -16,4 +19,7 @@ plt.ylabel('Número de Restaurantes Premiados')
 plt.title('Número de Restaurantes com Uma Estrela Michelin por Região')
 plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
-plt.show()
+
+st.pyplot(plt)
+streamlit run app.py
+
