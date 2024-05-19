@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-csv_url = 'https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/one-star-michelin-restaurants.csv'
+csv_url = 'https://raw.githubusercontent.com/majufigueiredo/Estrela_Michelin/main/one-star-michelin-restaurants.csv'
 
 
 df = pd.read_csv(csv_url)
