@@ -1,0 +1,8 @@
+wordcloud
+streamlit
+pandas
+requests
+matplotlib
+numpy
+beautifulsoup4
+networkx
